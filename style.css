@@ -2,10 +2,8 @@
     box-sizing: border-box;
 }
 
-/* балуюсь */
-
 body {
-    background: #ffffff;
+    background: white;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
     color: #766259;
@@ -47,7 +45,7 @@ header a {
     grid-area: first_line;
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
@@ -74,7 +72,7 @@ header a {
     justify-content: flex-end;
     align-items: center;
     list-style: none;
-    margin-left: 271px;
+    margin-left: 1px;
     padding: 0;
     width: 273px;
     height: 20px;
@@ -177,21 +175,23 @@ header a {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    height: 15px;
+    flex-wrap: nowrap;
+    height: 40px;
+    align-items: center;
 }
 
-.third_line_menu {
+.third_line_menu, .third_line_menu_2 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: baseline;
     list-style: none;
-    width: 970px;
     margin: 0;
     padding-left: 0;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
-.third_line_menu a {
+.third_line_menu a, .third_line_menu_2 li {
     display: block;
     color: #593518;
     font-size: 15px;
@@ -199,11 +199,15 @@ header a {
     text-align: left;
     text-transform: uppercase;
     text-decoration: none;
+    align-items: center;
 }
 
-.third_line_menu img {
+.third_line_menu a {
+    padding-right: 30px;
+}
+
+.third_line_menu_2 img {
     padding-right: 12px;
-    padding-left: 92px;
 }
 
 /* КАРТИНКИ В ШАПКЕ */
@@ -253,9 +257,8 @@ header a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-style: italic;
-    padding-top: 45px;
-    margin-top: 0;
-    margin-bottom: 33px;
+    margin-top: 40px;
+    margin-bottom: 0;
     font-weight: normal;
 }
 
@@ -269,6 +272,8 @@ header a {
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 33px;
+    margin-bottom: 0;
 }
 
 .form_radio_btn {
@@ -313,36 +318,31 @@ label {
     background-color: #fdfcfa;
 }
 
+/* КОНТАКТНЫЕ ДАННЫЕ */
+
 .main h4 {
     color: #461f02;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     font-style: italic;
-    margin-top: 40px;
-    margin-bottom: 19px;
+    margin-top: 35px;
+    margin-bottom: 0;
     font-weight: normal;
 }
-
-/* КОНТАКТНЫЕ ДАННЫЕ */
 
 .container_1 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
-    align-items: flex-start;
-    border: none;
-    margin: 0;
+    margin-top: 20px;
     padding: 0;
-    overflow: hidden;
-}
-
-.cell {
-    width: 185px;
-    margin: 0;
 }
 
 .cell-1, .cell-3, .cell-5 {
     margin-right: 24px;
+}
+
+.cell {
+    height: 70px;
 }
 
 .col-25 {
@@ -353,7 +353,7 @@ label {
     width: 185px;
     height: 35px;
     margin-right: 0;
-    margin-bottom: 18px;
+    margin-bottom: 0;
 }
 
 input {
@@ -362,7 +362,6 @@ input {
     border-radius: 2px;
     border: 1px solid #c4b7b1;
     margin-right: 0;
-    margin-bottom: 18px;
     padding: 11px;
     font-size: 16px;
     font-weight: 600;
@@ -373,11 +372,15 @@ select {
     width: 185px;
     height: 35px;
     margin-right: 19px;
-    margin-bottom: 18px;
+    margin-bottom: 0;
     padding-left: 11px;
 }
 
 /* АДРЕС И ДОСТАВКА */
+
+.container_2 {
+    margin-top: 15px;
+}
 
 .container_1 select {
     appearance: none;
@@ -389,22 +392,14 @@ select {
     border: 1px solid #c4b7b1;
 }
 
-.main span h4 {
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
 h5 {
     color: #461f02;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 19px;
     font-style: italic;
     font-weight: normal;
-    margin: 7px 0 15px 0;
-}
-
-.main span h5 {
-    margin: 29px 0 15px 0;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .delivery {
@@ -412,6 +407,7 @@ h5 {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    margin: 15px 0 0 0;
 }
 
 .form_radio {
@@ -493,6 +489,10 @@ select {
     font-weight: 600;
 }
 
+.metro-station {
+    margin: 15px 0 0 0;
+}
+
 .metro-station select {
     appearance: none;
     background-color: #fff;
@@ -506,10 +506,12 @@ select {
 /* КАРТА */
 
 .map {
-    margin: 3px 0 0 0;
-    border: none;
+    margin: 20px 0 0 0;
     padding: 0;
     width: 100%;
+    box-shadow: 0 10px 10px -5px #faefe1;
+    border-radius: 2px;
+    border: 1px solid #f0e4ca;
 }
 
 /* ТЕКТОВАЯ ФОРМА */
@@ -520,6 +522,7 @@ textarea {
     resize: none;
     border-radius: 2px;
     border: 1px solid #c4b7b1;
+    margin: 20px 0 0 0;
 }
 
 /* ВЫБОР СПОСОБА ОПЛАТЫ */
@@ -553,23 +556,20 @@ a.button {
 .aside {
     grid-area: aside;
     margin-top: 106px;
-}
-
-table {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     width: 308px;
-    height: auto;
-    border: 1px solid #f0e4ca;
+    border-top: 1px solid #f0e4ca;
+    border-bottom: none;
     background-color: #ffffff;
     border-collapse: collapse;
     box-shadow: 0 10px 10px -5px #f8eede;
 }
 
-th, td {
-    border: none;
-}
-
-th {
-    padding-left: 18px;
+.aside_head {
+    padding: 20px 0 5px 18px;
     color: #461f02;
     font-family: Georgia;
     font-size: 25px;
@@ -577,73 +577,93 @@ th {
     text-align: left;
     font-weight: normal;
     border-bottom: none;
-    height: 60px;
+    border-right: 1px solid #f0e4ca;
+    border-left: 1px solid #f0e4ca;
 }
 
-td {
-    padding: 1px 10px 10px 18px;
+.aside_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-right: 1px solid #f0e4ca;
+    border-left: 1px solid #f0e4ca;
+}
+
+.aside-item, .aside-item a {
+    width: 190px;
     color: #766259;
-}
-
-td a {
     text-decoration: none;
-    color: #766259;
 }
 
-.price {
-    text-align: right;
-    padding: 0 20px 0 0;
-    width: 100px;
-    font-weight: bold;
+.aside-price {
+    font-weight: 700;
     color: #7d5543;
-    vertical-align: text-top;
 }
 
-.total td {
-    background-color: #fdfcfa;
-    vertical-align: bottom;
-    height: 10px;
+.aside_list_item-1 {
+    padding: 17px 0 0 18px;
 }
 
-.total td.price {
-    padding-bottom: 15px;
+.aside_list_item-2 {
+    padding: 17px 21px 0 0;
 }
 
-.total_1 td {
+.aside_list_item-3 {
+    padding: 17px 0 20px 18px;
+}
+
+.aside_list_item-4 {
+    padding: 17px 21px 20px 0;
+}
+
+.aside_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     border-top: 1px dashed #f0e4ca;
-    padding-top: 15px;
+    background: #fdfcfa;
+    border-right: 1px solid #f0e4ca;
+    border-left: 1px solid #f0e4ca;
 }
 
-.total_1 td.price {
-    padding-bottom: 10px;
+.aside_info_item-1, .aside_info_item-3 {
+    padding: 15px 0 0 18px;
 }
 
-.total_3 td {
-    padding-bottom: 20px;
+.aside_info_item-2, .aside_info_item-4 {
+    padding: 15px 21px 0 0;
 }
 
-.total_3 td.price {
-    padding-bottom: 20px;
+.aside_info_item-5 {
+    padding: 15px 0 20px 18px;
 }
 
-tfoot {
-    border-top: 1px dashed #f0e4ca;
-    background-color: #fcfaf5;
+.aside_info_item-6 {
+    padding: 15px 21px 20px 0;
 }
 
-tfoot td {
+.aside_total {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     height: 53px;
-    font-weight: bold;
-    color: #663721;
-    vertical-align: middle;
-    padding-bottom: 0;
+    background: #fcfaf5;
+    border-top: 1px dashed #f0e4ca;
+    border-bottom: 1px solid #f0e4ca;
+    border-right: 1px solid #f0e4ca;
+    border-left: 1px solid #f0e4ca;
 }
 
-tfoot td.price {
+.aside_total_item-1 {
+    padding: 17px 0 19px 18px;
+    font-weight: 700;
+    color: #663721;
+}
+
+.aside_total_item-2 {
+    padding: 13px 21px 19px 0;
     color: #461f02;
     font-size: 20px;
-    font-weight: 700;
-    vertical-align: middle;
 }
 
 /* FOOTER */
@@ -705,23 +725,27 @@ footer ul {
 
 .item-1 {
     grid-area: item-1;
-    display: grid;
-    grid-template-columns: 100px 100px;
-    grid-column-gap: 5px;
-    grid-template-rows: 60px auto;
-    grid-template-areas: "h6 h6" "first second";
+    display: flex;
+    flex-flow: row wrap;
+    height: 170px;
 }
 
 .item-1 h6 {
-    grid-area: h6;
+    width: 226px;
+    height: 22px;
+}
+
+.footer_list {
+    height: 80px;
+    margin-top: 10px;
 }
 
 .footer_list_1 li {
-    grid-area: first;
+    width: 100px;
 }
 
 .footer_list_2 li {
-    grid-area: second;
+    width: 100px;
 }
 
 .item-2 {
@@ -799,14 +823,11 @@ form.catalin button {
     padding-top: 11px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
 .bottom_navigation_1 {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: left;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -818,7 +839,6 @@ form.catalin button {
     flex-flow: row wrap;
     justify-content: right;
     list-style: none;
-    margin-left: 684px;
     margin-right: 0;
     padding: 0;
 }
