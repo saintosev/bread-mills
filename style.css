@@ -9,7 +9,7 @@ body {
     color: #766259;
     background: url(images/Шапка.png), url(images/Фон_подвала.png);
     background-position: top, bottom;
-    background-size: 1920px auto;
+    background-size: auto;
     background-repeat: no-repeat;
     margin: 0;
     overflow-x: hidden;
@@ -191,7 +191,11 @@ header a {
     flex-wrap: nowrap;
 }
 
-.third_line_menu a, .third_line_menu_2 li {
+.third_line_menu_3 {
+    display: none;
+}
+
+.third_line_menu a, .third_line_menu_2 li, .third_line_menu_3 li {
     display: block;
     color: #593518;
     font-size: 15px;
@@ -235,7 +239,7 @@ header a {
     display: grid;
     grid-template-columns: repeat(12, 63px);
     grid-column-gap: 20px;
-    grid-template-rows: 1700px;
+    grid-template-rows: 1699px;
     grid-template-areas: "main main main main main 0 0 0 aside aside aside aside";
     position: relative;
 }
@@ -565,7 +569,6 @@ a.button {
     border-bottom: none;
     background-color: #ffffff;
     border-collapse: collapse;
-    box-shadow: 0 10px 10px -5px #f8eede;
 }
 
 .aside_head {
@@ -652,6 +655,7 @@ a.button {
     border-bottom: 1px solid #f0e4ca;
     border-right: 1px solid #f0e4ca;
     border-left: 1px solid #f0e4ca;
+    box-shadow: 0 10px 10px -5px #f8eede;
 }
 
 .aside_total_item-1 {
@@ -758,7 +762,6 @@ footer ul {
 
 .item-4 {
     grid-area: item-4;
-    line-height: 17px;
 }
 
 .item-4 p {
@@ -846,4 +849,147 @@ form.catalin button {
 .bottom_navigation_2 a {
     padding-left: 7px;
     padding-right: 0;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+    body {
+        margin-left: 8px;
+    }
+    #grid {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: auto;
+        grid-template-areas: "aside" "main";
+    }
+    /* HEADER */
+    header {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(63px, 100px));
+    }
+    .first_line_navigation_1 {
+        display: none;
+    }
+    .first_line_navigation_2 {
+        margin: auto;
+        justify-content: space-between;
+        width: 65%;
+    }
+    .second_line {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .second_line a {
+        position: relative;
+        width: 100%;
+        margin: 0 0 0 10%;
+    }
+    .second_line_search {
+        order: 3;
+        width: 84%;
+        margin: auto;
+    }
+    .second_line_phone {
+        display: none;
+    }
+    .third_line {
+        margin-top: 5px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 84%;
+        margin: auto;
+    }
+    .third_line_menu {
+        display: none;
+    }
+    .third_line_menu_3 {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        padding-left: 0;
+        align-items: center;
+        order: -1;
+        border-bottom: 1px solid #c3bab2;
+    }
+    .img_basket {
+        display: none;
+    }
+    /* MAIN */
+    .main h3 {
+        margin-top: 30px;
+    }
+    .delivery {
+        max-width: 98%;
+    }
+    .map {
+        max-width: 98%;
+    }
+    textarea {
+        max-width: 98%;
+    }
+    a.button {
+        margin-left: auto;
+    }
+    .button {
+        margin-bottom: 30px;
+    }
+    /* ASIDE */
+    .aside {
+        margin: 10px 0 0 -5px;
+        width: 100%;
+    }
+    /* FOOTER */
+    .img_footer_right, .img_footer_left {
+        display: none;
+    }
+    footer {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: auto;
+        grid-template-areas: "item-1 item-2" "item-3 item-3" "item-4 item-4" "bottom bottom";
+        grid-column-gap: 0;
+        line-height: normal;
+        margin: auto;
+    }
+    .item-1, .item-2 {
+        height: 30px;
+    }
+    .item h6 {
+        margin: 0;
+        width: auto;
+    }
+    .item-1 h6 {
+        border-bottom: 1px dashed #c3bab2;
+    }
+    .item-2 h6 {
+        width: 120px;
+        border-bottom: 1px dashed #c3bab2;
+    }
+    .item-1 ul, .item-2 ul {
+        display: none;
+    }
+    .item-3 {
+        line-height: 18px;
+    }
+    .footer_list a {
+        font-size: 16px;
+    }
+    .item-4 h6 {
+        margin-top: 3px;
+    }
+    .item-4 p {
+        display: none;
+    }
+    .catalin {
+        margin: 7px 0 5px 0;
+    }
+    .hr-line_3 {
+        width: 98%;
+    }
+    .bottom {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .bottom_navigation_2 {
+        padding-right: 5px;
+    }
 }
