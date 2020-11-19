@@ -917,13 +917,7 @@ form.catalin button {
     .main h3 {
         margin-top: 30px;
     }
-    .delivery {
-        max-width: 98%;
-    }
-    .map {
-        max-width: 98%;
-    }
-    textarea {
+    .delivery, .map, textarea {
         max-width: 98%;
     }
     a.button {
